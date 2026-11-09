@@ -1,1 +1,267 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ujian Sekolah Online</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+          background: linear-gradient(180deg, #b9deed 0%, #efefef 40%, #ffffff 100%);
+            background-attachment: fixed;
+            color: #333333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+            margin-top: 10px;
+        }
+
+        header h1 {
+           color: #1e4b70;
+            font-size: 1.2rem; /* Diperkecil dari 2.3rem */
+            margin-bottom: 3px;
+            font-weight: 500;
+        }
+
+        header p {
+           color: #556c81;
+            font-size: 0.50rem; /* Diperkecil dari 1.1rem */
+            font-weight: 300;
+        }
+
+        /* Grid untuk Kartu Mapel */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            width: 100%;
+            max-width: 900px;
+            padding: 10px;
+        }
+
+        /* Desain Kartu Mapel */
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+	   
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+        }
+
+        .card h2 {
+            font-size: 1.2rem;
+            color: #1e4b70;
+            margin-bottom: 8px;
+        }
+
+        .card p {
+            font-size: 0.85rem;
+            color: #666666;
+            margin-bottom: 15px;
+	    line-height: 1.4;
+        }
+	/* Label Jadwal Tanggal Ujian */
+        .jadwal-tag {
+            display: inline-block;
+            background-color: #fff0f0;
+            color: #d9534f;
+            padding: 3px 8px; /* Diperkecil */
+            border-radius: 20px;
+            font-size: 0.75rem; /* Diperkecil dari 0.85rem */
+            font-weight: 600;
+            margin-bottom: 12px;
+	}
+        /* Desain Tombol */
+        .btn-link {
+            text-decoration: none;
+            background: linear-gradient(135deg, #4fa3d1 0%, #1d6fa5 100%);
+            color: white;
+            padding: 10px 15px; /* Diperkecil dari 12px 20px */
+            border-radius: 6px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            font-size: 0.9rem; /* Diperkecil dari 1rem */
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 8px rgba(29, 111, 165, 0.25);
+        }
+
+        .btn-link:hover {
+            background-color: #2980b9;
+        }
+
+        /* Variasi warna pudar untuk border atas kartu agar lebih menarik */
+        .card-matematika { border: 2px solid #4fa3d1 !important; } 
+        .card-PKN { border: 2px solid #4fa3d1 !important; } 
+        .card-SeniBudaya { border: 2px solid #4fa3d1 !important; } 
+        .card-BahasaIndonesia { border: 2px solid #4fa3d1 !important; }
+ 	.card-IPAS { border: 2px solid #4fa3d1 !important; } 
+ 	.card-dasarprogramkeahlianMPLB { border: 2px solid #4fa3d1 !important; }
+	.card-dasarprogramkeahlianTPFL { border: 2px solid #4fa3d1 !important; }
+	.card-dasarprogramkeahlianTKRO { border: 2px solid #4fa3d1 !important; }
+	.card-informatika { border: 2px solid #4fa3d1 !important; }
+	.card-Sejarah { border: 2px solid #4fa3d1 !important; }
+	.card-Penjaskes { border: 2px solid #4fa3d1 !important; }
+	.card-BahasaInggris { border: 2px solid #4fa3d1 !important; }
+	.card-BahasaJawa { border: 2px solid #4fa3d1 !important; }
+    </style>
+</head>
+<body>
+
+    <header>
+    <!-- GANTI 'logo.png' dengan link gambar atau nama file logomu -->
+    <img src="https://iili.io/BsmClaV.png" alt="Logo Sekolah" class="logo">
+    
+<h1>ASESMEN SUMATIF AKHIR SEMESTER</h1>
+      <h1> TAHUN PELAJARAN 2026-2027</h1>
+	<h1> SMK MUHAMMADIYAH 2 WATES</h1>
+    </header>
+
+    <div class="container">
+        <!-- Kartu Matematika -->
+        <div class="card card-matematika">
+            <div>
+                <h2>Matematika</h2>
+               <p> Hari/Tanggal : Jumat / 5 Juni 2026<br>Waktu: 07.30-08.30</p>
+            </div>
+            <!-- GANTI LIRIK DI BAWAH INI DENGAN LINK GOOGLE FORM / PORTAL UJIANMU -->
+            <a href="https://forms.gle/v7yyErFyDdvrUUWD7" target="_blank" class="btn-link">Mulai Ujian</a>
+        </div>
+
+        <!-- Kartu PKN -->
+        <div class="card card-PKN">
+            <div>
+                <h2>PKN</h2>
+                <p> Hari/Tanggal : Jumat / 5 Juni 2026<br>Waktu: 08.30-09.30</p>
+            </div>
+            <a href="https://forms.gle/tAe4GRjAz1Kd3qQR7" target="_blank" class="btn-link">Mulai Ujian</a>
+        </div>
+
+        <!-- Kartu Seni Budaya -->
+        <div class="card card-SeniBudaya">
+            <div>
+                <h2>Seni Budaya</h2>
+                <p> Hari/Tanggal : Jumat / 5 Juni 2026<br>Waktu: 10.00-11.00</p>
+            </div>
+            <a href="https://forms.gle/LYgeLaYJb5yZ4q836" target="_blank" class="btn-link">Mulai Ujian</a>
+        </div>
+
+        <!-- Kartu Bahasa Indonesia -->
+        <div class="card card-BahasaIndonesia">
+            <div>
+                <h2>Bahasa Indonesia</h2>
+		<p> Hari/Tanggal : Senin / 8 Juni 2026<br>Waktu: 07.30-08.30</p>
+            </div>
+            <a href="https://forms.gle/3CMEAZGmKucxobeb8" target="_blank" class="btn-link">Mulai Ujian</a>
+        </div>
+
+ <!-- Kartu IPAS -->
+        <div class="card card-IPAS">
+            <div>
+                <h2>IPAS</h2>
+		<p> Hari/Tanggal : Senin / 8 Juni 2026<br>Waktu: 08.30-09.30</p>
+</div>
+            <a href="https://forms.gle/US9B1PCYxrQA3q9t8" target="_blank" class="btn-link">Mulai Ujian</a>
+        </div>
+
+<!-- Kartu dasar program keahlian -->
+        <div class="card card-dasarprogramkeahlianMPLB">
+            <div>
+                <h2>Dasar Program Keahlian MPLB</h2>
+		<p> Hari/Tanggal : Senin / 8 Juni 2026<br>Waktu: 10.00-11.00</p>
+</div>            
+<a href="https://forms.gle/onsAm9K3y3pD9awx8" target="_blank" class="btn-link">Mulai Ujian</a>
+        </div>
+
+<!-- Kartu dasar program keahlian -->
+        <div class="card card-dasarprogramkeahlianTPFL">
+	<div>
+        <h2>Dasar Program Keahlian TPFL</h2>
+	<p>Hari / Tanggal : Senin / 8 Juni 2026<br> Waktu: 10.00-11.00</p>
+            </div>
+            <a href="https://forms.gle/2YQ4MTc3TM8exT7s5" target="_blank" class="btn-link">Mulai Ujian</a> 
+</div>
+
+		<!-- Kartu dasar program keahlian -->
+        <div class="card card-dasarprogramkeahlianTKRO">
+            <div>
+               <h2>Dasar Program Keahlian TKRO</h2>
+		<p>Hari / Tanggal : Senin / 8 Juni 2026<br> Waktu: 10.00-11.00</p>
+		</div>	
+            <a href="https://forms.gle/opFLfPLjPTJ7YebK8" target="_blank" class="btn-link">Mulai Ujian</a>
+        </div>
+
+       <!-- Kartu Informatika -->
+        <div class="card card-informatika">
+            <div>
+                <h2>Informatika</h2>
+		<p> Hari/Tanggal : Selasa / 9 Juni 2026<br>Waktu: 07.30-08.30</p>
+            </div>
+            <a href="https://forms.gle/zuo52FjtJpUh7hMr5" target="_blank" class="btn-link">Mulai Ujian</a>
+        </div>
+
+ <!-- Kartu Sejarah -->
+        <div class="card card-Sejarah">
+            <div>
+                <h2>Sejarah</h2>
+		<p> Hari/Tanggal : Selasa / 9 Juni 2026<br>Waktu: 08.30-09.30</p>
+            </div>
+            <a href="https://forms.gle/NzCdfbEzf9HgcXrB8" target="_blank" class="btn-link">Mulai Ujian</a>
+        </div>
+
+<!-- Kartu Penjaskes -->
+        <div class="card card-Penjaskes">
+            <div>
+                <h2>Penjaskes</h2>
+		<p> Hari/Tanggal : Selasa / 9 Juni 2026<br>Waktu: 10.00-11.00</p>
+            </div>
+            <a href="https://forms.gle/dTq8bwCgW33iryFdA" target="_blank" class="btn-link">Mulai Ujian</a>
+        </div>
+
+<!-- Kartu Bahasa Inggris -->
+        <div class="card card-BahasaInggris">
+            <div>
+                <h2>Bahasa Inggris</h2>
+		<p> Hari/Tanggal : Rabu / 10 Juni 2026<br>Waktu: 07.30-08.30</p>
+            </div>
+            <a href="https://forms.gle/ohscSqscBca1HiZB7" target="_blank" class="btn-link">Mulai Ujian</a>
+        </div>
+
+
+<!-- Kartu Bahasa Jawa -->
+        <div class="card card-BahasaJawa">
+            <div>
+                <h2>Bahasa Jawa</h2>
+		<p> Hari/Tanggal : Rabu / 10 Juni 2026<br>Waktu: 08.30-09.30</p>
+            </div>
+            <a href="https://forms.gle/XEC7tqYw6CVJrGJ58" target="_blank" class="btn-link">Mulai Ujian</a>
+        </div>
+
+    </div>
+</body>
+</html>
 
